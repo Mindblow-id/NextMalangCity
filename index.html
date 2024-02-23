@@ -9,11 +9,21 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="bg-black/10 absolute w-full h-[100px] flex items-center" x-data="{open: false}">
-        <nav class="flex justify-between container mx-auto max-w-screen-xl">
+        <nav class="flex justify-between container mx-auto md:max-w-screen-xl">
             <h1 class="text-3xl text-white">NMCT</h1>
             <ul class="flex gap-4">
                 <li class="capitalize text-white font-['ethnocentric'] hover:text-gray-300 transition transform duration-300">
@@ -50,7 +60,7 @@
     </div>
     <!-- About -->
     <section id="about" class="md:py-24 min-h-screen flex justify-center">
-        <div class="container max-w-screen-xl">
+        <div class="container md:max-w-screen-xl">
             <h1 class="flex justify-center text-5xl">About</h1>
             <div class="mt-8 px-36">
                 <p class="text-xl tracking-widest indent-16">Malang city is a charming city located in East Java, Indonesia. It's famous for its cool climate, stunning landscapes, and rich cultural heritage. The city is surrounded by picturesque mountains, including Mount Bromo, which is a must-visit
@@ -96,12 +106,12 @@
     <!-- Terbaru dari NMCT -->
     <section id="terbaru" class="md:py-24 max-w-screen min-h-screen flex flex-col justify-center">
         <h1 class="text-3xl py-8 px-16">Terbaru dari NMCT</h1>
-        <div class="w-full flex">
+        <div class="w-full md:flex">
             <div class="">
                 <img src="./assets/images/terbaru/MCC.svg" alt="" />
             </div>
             <div class="flex flex-col">
-                <div class="flex">
+                <div class="md:flex">
                     <div class="">
                         <img src="./assets/images/terbaru/KYT.svg" alt="" />
                     </div>
@@ -109,7 +119,7 @@
                         <img src="./assets/images/terbaru/SCKM.svg" alt="" />
                     </div>
                 </div>
-                <div class="flex">
+                <div class="md:flex">
                     <div class="">
                         <img src="./assets/images/terbaru/EKDT.svg" alt="" />
                     </div>
@@ -119,12 +129,12 @@
                 </div>
             </div>
         </div>
-        <div class="w-full flex">
+        <div class="w-full md:flex">
             <div class="">
                 <img src="./assets/images/terbaru/RRL.svg" alt="" />
             </div>
             <div class="flex flex-col">
-                <div class="flex">
+                <div class="md:flex">
                     <div class="">
                         <img src="./assets/images/terbaru/SKDP.svg" alt="" />
                     </div>
@@ -132,7 +142,7 @@
                         <img src="./assets/images/terbaru/PJP.svg" alt="" />
                     </div>
                 </div>
-                <div class="flex">
+                <div class="md:flex">
                     <div class="">
                         <img src="./assets/images/terbaru/SPC.svg" alt="" />
                     </div>
@@ -144,8 +154,35 @@
         </div>
     </section>
     <!-- Technology -->
-    <section id="technology ">
-
+    <section id="technology " class="md:py-24 max-w-screen min-h-screen flex flex-col justify center">
+        <h1 class="text-3xl text-center text-5xl my-4 md:my-8">Technology</h1>
+        <div class="">
+            <div class="md:flex">
+                <div class="w-full md:w-1/2 bg-[#2E3233] flex flex-col h-[45vh]">
+                    <h1 class="max-w-[300px] pt-12 pl-16 text-2xl">Internet Of Things</h1>
+                    <p class="mt-16 text-left text-lg max-w-[400px] mx-auto">
+                        Internet Of Things (IoT) adalah teknologi yang menggunakan Jaringan Internet untuk mengoperasikan berbagai macam perangkat.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col h-[45vh]">
+                    <h1 class="max-w-[300px] pt-12 pl-16 text-2xl">Artificial Intelligent</h1>
+                    <p class="mt-16 text-left text-lg max-w-[400px] mx-auto">
+                        Artificial Intelligent (AI) adalah teknologi yang memiliki kecerdasaran tersendiri. AI biasanya digunakan sebagai Virtual Assistant, Smart Services dan Smart Control. </p>
+                </div>
+            </div>
+            <div class="md:flex">
+                <div class="w-full md:w-1/2 flex flex-col h-[45vh]">
+                    <h1 class="max-w-[300px] pt-12 pl-16 text-2xl">Cloud Computing</h1>
+                    <p class="mt-16 text-left text-lg max-w-[400px] mx-auto">
+                        Cloud Computing adalah model komputasi yang memungkinkan akses penyimpanan data dan akses jarak jauh melalui internet. </p>
+                </div>
+                <div class=" w-full md:w-1/2 bg-[#2E3233] flex flex-col h-[45vh]">
+                    <h1 class="max-w-[300px] pt-12 pl-16 text-2xl">Wearble Technology</h1>
+                    <p class="mt-16 text-left text-lg max-w-[400px] mx-auto">
+                        Wearable Technology adalah perangkat Teknologi yang dapat dipakai, seperti Smart Watch, dan Fitness Tracker. </p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- 3 Prinsip -->
     <section id="threeprincipal ">
@@ -153,7 +190,47 @@
     </section>
     <!-- Indicator -->
     <section id="indicator ">
-
+        <h1 class="text-5xl py-8 px-16"> Indicator</h1>
+        <div class="overflow-hidden whitespace-nowrap flex gap-[100px]">
+            <div id="slider" class="w-fit min-h-min flex justify-center gap-[70px] animate-slide duration-50000ms infinite linear">
+                <div class="flex justify-center">
+                    <div class="pt-4 w-96 h-52 bg-white flex flex-col border rounded-lg">
+                        <img src="./assets/images/indicator/economy.svg" class="block m-auto" alt="..loading ">
+                        <h3 class="text-black text-center mt-auto pb-4">Smart Economy</h3>
+                    </div>
+                </div>
+                <div class="flex justify-center ">
+                    <div class="pt-4 w-96 h-52 bg-white flex flex-col border rounded-lg ">
+                        <img src="./assets/images/indicator/env.svg" class="block m-auto" alt="..loading ">
+                        <h3 class="text-black text-center mt-auto pb-4">Smart Environment</h3>
+                    </div>
+                </div>
+                <div class="flex justify-center ">
+                    <div class="pt-4 w-96 h-52 bg-white flex flex-col border rounded-lg ">
+                        <img src="./assets/images/indicator/gov.svg " class="block m-auto" alt="..loading ">
+                        <h3 class="text-black text-center mt-auto pb-4">Smart Government</h3>
+                    </div>
+                </div>
+                <div class="flex justify-center ">
+                    <div class="pt-4 w-96 h-52 bg-white flex flex-col border rounded-lg ">
+                        <img src="./assets/images/indicator/liv.svg " class="block m-auto" alt="..loading ">
+                        <h3 class="text-black text-center mt-auto pb-4">Smart Living</h3>
+                    </div>
+                </div>
+                <div class="flex justify-center ">
+                    <div class="pt-4 w-96 h-52 bg-white flex flex-col border rounded-lg ">
+                        <img src="./assets/images/indicator/mobility.svg " class="block m-auto" alt="..loading ">
+                        <h3 class="text-black text-center mt-auto pb-4">Smart Mobility</h3>
+                    </div>
+                </div>
+                <div class="flex justify-center ">
+                    <div class="pt-4 w-96 h-52 bg-white flex flex-col border rounded-lg ">
+                        <img src="./assets/images/indicator/people.svg" class="block m-auto" alt="..loading ">
+                        <h3 class="text-black text-center mt-auto pb-4">Smart People</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Closing Page -->
     <section id="last ">
