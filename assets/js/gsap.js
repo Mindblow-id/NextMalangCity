@@ -7,4 +7,3 @@ gsap.from('#box', {
 
 const tl = gsap.timeline()
 
-
