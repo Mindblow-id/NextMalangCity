@@ -39,11 +39,28 @@ hamburger.addEventListener('mousedown', (e) => {
 
 })
 
-// $(document).ready(function(){
-//   $("#slider").owlCarousel({
-//     autoplay: true,
-//     loop: true,
-//     autoplayTimeout:2000,
-//     autoplayHoverPause:true
-//   });
-// });
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 1500
+  },
+  grabCursor: true,
+  slidesPerView: 1,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 40
+      
+    }
+  }
+});
