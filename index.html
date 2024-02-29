@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <style>
         @keyframes slide {
             0% {
@@ -21,7 +23,7 @@
 </head>
 
 <body>
-    <div class="bg-black/10 absolute w-full h-[100px] flex items-center" x-data="{open: false}">
+    <div id="navbar" class="bg-black/0 fixed z-[100] w-full h-[100px] flex items-center transition-all duration-300" >
         <nav class="flex justify-between container mx-auto md:max-w-screen-xl">
             <h1 class="text-3xl text-white">NMCT</h1>
             <ul class="sm:flex gap-4 hidden items-center">
@@ -196,7 +198,7 @@
     <!-- Indicator -->
     <section id="indicator ">
         <h1 class="text-5xl py-8 px-16"> Indicator</h1>
-        <div class="overflow-hidden whitespace-nowrap flex gap-[100px]">
+        <div id="carousel" class="overflow-hidden whitespace-nowrap flex gap-[100px]">
             <div id="slider" class="w-fit min-h-min flex justify-center gap-[70px] animate-slide duration-50000ms infinite linear">
                 <div class="flex justify-center">
                     <div class="pt-4 w-96 h-52 bg-white flex flex-col border rounded-lg">
@@ -241,31 +243,7 @@
     <section id="last ">
 
     </section>
-    <div id="modal-1" aria-hidden="true">
-
-        <!-- [2] -->
-        <div tabindex="-1" data-micromodal-close>
-      
-          <!-- [3] -->
-          <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
-      
-      
-            <header>
-              <h2 id="modal-1-title">
-                Modal Title
-              </h2>
-      
-              <!-- [4] -->
-              <button aria-label="Close modal" data-micromodal-close></button>
-            </header>
-      
-            <div id="modal-1-content">
-              Modal Content
-            </div>
-      
-          </div>
-        </div>
-      </div>
+    
 
     <div class="w-20 h-20 bg-blue-400" id="box">
 
@@ -288,7 +266,13 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js "></script>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+        crossorigin="anonymous"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/index.js "></script>
+
 </body>
 
 </html>

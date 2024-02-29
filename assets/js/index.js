@@ -38,3 +38,12 @@ hamburger.addEventListener('mousedown', (e) => {
 
 
 })
+
+// $(document).ready(function(){
+//   $("#slider").owlCarousel({
+//     autoplay: true,
+//     loop: true,
+//     autoplayTimeout:2000,
+//     autoplayHoverPause:true
+//   });
+// });
