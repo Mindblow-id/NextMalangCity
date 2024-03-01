@@ -40,7 +40,7 @@ hamburger.addEventListener('mousedown', (e) => {
     secondLine.classList.remove(hamburgerLineOpen.second)
     thirdLine.classList.remove(...hamburgerLineOpen.third)
     hamburger.classList.remove('navbar-open')
-    
+
     navModal.classList.remove(navModalShow)
   }
 
@@ -97,3 +97,24 @@ const swiper = new Swiper('.swiper', {
     }
   }
 });
+
+
+
+// tabs
+
+const tabLink = document.querySelectorAll('.tab-link')
+const tabContent = document.querySelectorAll('.tab-content')
+const styleLink = ['tab-link-active']
+const styleContent = ['tab-content-active']
+
+tabLink.forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+    
+    tabLink.forEach(el => el.classList.remove(...styleLink))
+
+    tab.classList.add(...styleLink)
+
+    tabContent.forEach(el => el.classList.remove(...styleContent))
+    tabContent[index].classList.add(...styleContent)
+  })
+})
